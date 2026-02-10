@@ -1,0 +1,200 @@
+.seating-container {
+  background-color: rgba(31, 21, 71, 0.733);
+  display: flex;
+  height: calc(100vh - 80px);
+  padding: 100px;
+  gap: 30px;
+}
+
+.seating-main {
+  display: flex;
+  width: 100%;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.table-section {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.poker-table {
+  position: relative;
+  width: 1000px;
+  height: 400px;
+  border: 3px solid #2d5016;
+  border-radius: 500px / 200px;
+  background: radial-gradient(ellipse at center, #2d5016 0%, #1a3009 100%);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dealer-marker {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75px;
+  height: 75px;
+  background: #ffd700;
+  border: 2px solid #333;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+
+.players-around-table {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.player-seat {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(83, 8, 8, 0.1);
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  box-sizing: border-box;
+  font-size: 20px;
+  word-break: break-word;
+}
+
+.player-name {
+  max-width: 100px;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 포커 테이블 위치 (딜러 12시 고정, 1시부터 시계방향) */
+.seat-0 {
+  top: 5%;
+  left: 64%;
+  transform: translateX(-50%);
+}
+.seat-1 {
+  top: 17%;
+  right: 14%;
+}
+.seat-2 {
+  top: 47%;
+  right: 3%;
+}
+.seat-3 {
+  top: 80%;
+  right: 20%;
+  transform: translateY(-50%);
+}
+.seat-4 {
+  bottom: 4%;
+  right: 45%;
+}
+.seat-5 {
+  bottom: 8%;
+  right: 65%;
+}
+.seat-6 {
+  bottom: 20%;
+  left: 15%;
+  transform: translateX(-50%);
+}
+.seat-7 {
+  bottom: 40%;
+  left: 3%;
+}
+.seat-8 {
+  bottom: 65%;
+  left: 15%;
+}
+.seat-9 {
+  top: 15%;
+  left: 32%;
+  transform: translateY(-50%);
+}
+
+.input-section {
+  flex: 1;
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+.input-section h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+}
+
+.player-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.player-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.player-input-group label {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+}
+
+.player-input-group input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.player-input-group input:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.arrange-btn {
+  width: 100%;
+  padding: 12px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.arrange-btn:hover {
+  background: #45a049;
+}
+
+.arrange-btn:active {
+  transform: scale(0.98);
+}

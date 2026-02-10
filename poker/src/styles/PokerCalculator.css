@@ -1,0 +1,90 @@
+.calculator-container {
+  padding: 30px;
+  background: #3e3b44;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+}
+
+.calculator-container h2 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-rows: repeat(2, 2fr);
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin: 0 5%;
+}
+
+.player-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.player-name-input {
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: border-color 0.3s;
+}
+
+.player-name-input:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.player-value-input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 13px;
+  transition: border-color 0.3s;
+}
+
+.player-value-input:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.2);
+}
+
+.player-value-input::placeholder {
+  color: #999;
+}
+.calculate-button {
+  margin: 1% auto;
+}
+.reset-button {
+  margin: 1% auto;
+  background-color: red;
+}
+
+.buy-in-container {
+  margin-bottom: 3%;
+}
+.buy-in-label {
+  color: #ffffff;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .calculator-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calculator-container {
+    padding: 15px;
+  }
+}
