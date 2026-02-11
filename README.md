@@ -1,73 +1,30 @@
-# React + TypeScript + Vite
+# 포커 게임 관리 도구
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+포커 게임의 플레이어 자리배치와 P&L(수익/손실) 계산을 위한 웹 애플리케이션입니다.
 
-Currently, two official plugins are available:
+## 기능
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 1. 플레이어 자리배치 (Poker Seating)
+- 플레이어 이름 입력
+- 자리배치 버튼으로 랜덤 셔플
+- 포커 테이블 시각화 (딜러 고정 12시, 플레이어 시계방향 배치)
+- 자동 저장 (새로고침해도 데이터 유지)
 
-## React Compiler
+### 2. P&L 계산기 (Poker Calculator)
+- Buy-In 설정
+- Entry, Stack 값 입력
+- 자동 계산 기능:
+  - 총 금액: Entry 총합 × Buy-In
+  - 개인 P&L: (Entry × Buy-In) - Stack
+- P&L 색상 표시 (양수: 빨간색, 음수: 파란색)
+- 모든 데이터 자동 저장
+- 초기화 버튼
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 사용 방법
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. PokerSeating에서 플레이어 이름 입력 후 "자리배치!" 클릭
+2. PokerCalculator로 이동
+3. Buy-In 값 입력
+4. Entry, Stack 값 입력
+5. "Calculate" 버튼으로 P&L 계산
+6. 필요시 "Reset" 버튼으로 전체 초기화
