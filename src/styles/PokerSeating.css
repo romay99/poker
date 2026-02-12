@@ -198,3 +198,113 @@
 .arrange-btn:active {
   transform: scale(0.98);
 }
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .seating-container {
+    padding: 24px;
+    height: auto;
+  }
+
+  .seating-main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .table-section {
+    width: 100%;
+    order: 2;
+    margin-bottom: 20px;
+  }
+
+  .poker-table {
+    width: 360px;
+    height: 300px;
+    border-radius: 360px / 150px;
+  }
+
+  .dealer-marker {
+    top: 4%;
+    width: 56px;
+    height: 56px;
+    font-size: 14px;
+  }
+
+  .player-seat {
+    width: 56px;
+    height: 56px;
+    font-size: 14px;
+  }
+
+  .input-section {
+    width: 100%;
+    order: 1;
+    max-height: none;
+  }
+
+  /* Adjust seat positions for smaller table */
+  .seat-0 {
+    top: 6%;
+    left: 64%;
+  }
+  .seat-1 {
+    top: 18%;
+    right: 12%;
+  }
+  .seat-2 {
+    top: 50%;
+    right: 4%;
+  }
+  .seat-3 {
+    top: 77%;
+    right: 18%;
+  }
+  .seat-4 {
+    bottom: 6%;
+    right: 46%;
+  }
+  .seat-5 {
+    bottom: 10%;
+    right: 66%;
+  }
+  .seat-6 {
+    bottom: 22%;
+    left: 16%;
+  }
+  .seat-7 {
+    bottom: 44%;
+    left: 4%;
+  }
+  .seat-8 {
+    bottom: 68%;
+    left: 16%;
+  }
+  .seat-9 {
+    top: 16%;
+    left: 32%;
+  }
+}
+
+@media (max-width: 420px) {
+  .poker-table {
+    width: 300px;
+    height: 260px;
+    border-radius: 300px / 130px;
+  }
+
+  .player-seat {
+    width: 48px;
+    height: 48px;
+    font-size: 12px;
+  }
+
+  .dealer-marker {
+    width: 48px;
+    height: 48px;
+    font-size: 12px;
+  }
+
+  .seating-container {
+    padding: 16px;
+  }
+}
